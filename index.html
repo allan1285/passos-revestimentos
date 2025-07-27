@@ -1,226 +1,225 @@
 <!DOCTYPE html>
-<html lang="pt-br">
-
+<html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Passos Revestimentos</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;800&display=swap" rel="stylesheet">
 </head>
-
 <body>
-  <!DOCTYPE html>
-  <html lang="pt-BR">
-
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Passos Revestimentos</title>
-    <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;800&display=swap" rel="stylesheet">
-  </head>
-
-  <body>
-    <!-- ÍCONE DO CARRINHO FIXO -->
-    <div class="cart-icon-container">
-      <img src="https://cdn-icons-png.flaticon.com/512/34/34568.png" alt="Carrinho" class="cart-icon"
-        onclick="toggleCart()" />
-      <span id="cart-count">0</span>
-
-      <div id="cart-dropdown" class="cart-dropdown">
-        <h3>Produtos no carrinho</h3>
-        <ul id="cart-items"></ul>
-        <a id="whatsapp-checkout" target="_blank">Finalizar no WhatsApp</a>
-      </div>
-    </div>
-
-    <header>
-      <img src="./img/logo.png" alt="Logo Passos Revestimentos">
-      <nav>
-        <a href="#sobre">Sobre</a>
-        <a href="#obras">Projetos</a>
-        <a href="#contato">Contato</a>
-        <a href="#orcamento" class="cta">Solicite Orçamento</a>
-      </nav>
-
-    </header>
-
-    <section class="hero">
-      <h1>Pisos e pedras de alto padrão</h1>
-      <ul>
-        <li>Acabamento sofisticado</li>
-        <li>Materiais de alta durabilidade</li>
-        <li>Estética premium</li>
-        <li>Valorização de ambientes</li>
-        <li>Fácil manutenção</li>
-      </ul>
-      <a href="#contato">ENTRE EM CONTATO</a>
-    </section>
-
-<section class="loja-container">
-  <h2 class="titulo-loja">Nossos Produtos</h2>
-
-  <div class="produtos-grid">
-    <div class="produto">
-      <img src="https://via.placeholder.com/300x200?text=Produto+1" alt="Produto 1">
-      <h3>Revestimento 3D Onda</h3>
-      <p><span>R$59,99</span></p>
-      <button onclick="adicionarAoCarrinho('Revestimento 3D Onda', 59.99)">Adicionar ao carrinho</button>
-    </div>
-
-    <div class="produto">
-      <img src="https://via.placeholder.com/300x200?text=Produto+2" alt="Produto 2">
-      <h3>Piso Granilhado Branco</h3>
-      <p><span>R$39,90</span></p>
-      <button onclick="adicionarAoCarrinho('Piso Granilhado Branco', 39.90)">Adicionar ao carrinho</button>
-    </div>
-
-    <div class="produto">
-      <img src="https://via.placeholder.com/300x200?text=Produto+3" alt="Produto 3">
-      <h3>Pedra São Tomé</h3>
-      <p><span>R$49,90</span></p>
-      <button onclick="adicionarAoCarrinho('Pedra São Tomé', 49.90)">Adicionar ao carrinho</button>
-    </div>
+  <!-- ÍCONE DO CARRINHO FIXO -->
+  <div class="icone-carrinho-fixo" onclick="toggleCarrinho()" style="position:fixed;top:20px;right:20px;z-index:1000;cursor:pointer;">
+    🛒 <span id="contador-carrinho">0</span>
   </div>
 
-  <!-- Ícone do carrinho no canto -->
-  <div class="icone-carrinho" onclick="abrirCarrinho()">
-    🛒 <span id="quantidade-carrinho">0</span>
-  </div>
+  <header>
+    <img src="./img/logo.png" alt="Logo Passos Revestimentos">
+    <nav>
+      <a href="#sobre">Sobre</a>
+      <a href="#obras">Projetos</a>
+      <a href="#contato">Contato</a>
+      <a href="#orcamento" class="cta">Solicite Orçamento</a>
+    </nav>
+   
+  </header>
 
-  <!-- Aba lateral do carrinho -->
-  <div class="carrinho-lateral" id="carrinhoLateral">
-    <div class="carrinho-topo">
-      <h2>Seu Carrinho</h2>
-      <span onclick="fecharCarrinho()" style="cursor:pointer">✖</span>
+  <section class="hero">
+    <h1>Pisos e pedras de alto padrão</h1>
+    <ul>
+      <li>Acabamento sofisticado</li>
+      <li>Materiais de alta durabilidade</li>
+      <li>Estética premium</li>
+      <li>Valorização de ambientes</li>
+      <li>Fácil manutenção</li>
+    </ul>
+    <a href="#contato">ENTRE EM CONTATO</a>
+  </section>
+
+  <section class="loja-container">
+    <h2 class="titulo-loja">Nossos Produtos</h2>
+    <div class="produtos-grid">
+      <div class="produto">
+        <img src="./img/83156c11-acf0-4c8f-b0c3-ff60558b26ee.png" alt="Produto 1">
+        <h3>Revestimento 3D Onda</h3>
+        <p><span>R$59,99</span></p>
+        <button onclick="adicionarAoCarrinho('Revestimento 3D Onda', 59.99, './img/83156c11-acf0-4c8f-b0c3-ff60558b26ee.png')">Adicionar ao carrinho</button>
+      </div>
+      <div class="produto">
+        <img src="https://via.placeholder.com/300x200?text=Produto+2" alt="Produto 2">
+        <h3>Piso Granilhado Branco</h3>
+        <p><span>R$39,90</span></p>
+        <button onclick="adicionarAoCarrinho('Piso Granilhado Branco', 39.90, 'https://via.placeholder.com/300x200?text=Produto+2')">Adicionar ao carrinho</button>
+      </div>
+      <div class="produto">
+        <img src="https://via.placeholder.com/300x200?text=Produto+3" alt="Produto 3">
+        <h3>Pedra São Tomé</h3>
+        <p><span>R$49,90</span></p>
+        <button onclick="adicionarAoCarrinho('Pedra São Tomé', 49.90, 'https://via.placeholder.com/300x200?text=Produto+3')">Adicionar ao carrinho</button>
+      </div>
     </div>
-    <ul id="lista-carrinho"></ul>
-    <p><strong>Total:</strong> R$ <span id="total">0.00</span></p>
-    <button class="finalizar-btn" onclick="finalizarCompra()">Finalizar Compra no WhatsApp</button>
-  </div>
-</section>
-    <section class="section">
-      <h2>Ambientes que transformamos</h2>
-      <div class="grid">
-        <div class="card">Salas Comerciais</div>
-        <div class="card">Residências de Alto Padrão</div>
-        <div class="card">Áreas Gourmet e Externas</div>
-        <div class="card">Escadas, Hall e Corredores</div>
-        <div class="card">Paredes com Revestimento Nobre</div>
-        <div class="card">Ambientes de Luxo Personalizados</div>
+    <!-- Ícone do carrinho no canto -->
+    <div class="icone-carrinho" onclick="abrirCarrinho()">
+      🛒 
+    </div>
+    <!-- Aba lateral do carrinho -->
+    <div class="carrinho-lateral" id="carrinho-lateral">
+      <div class="carrinho-topo">
+        <h2>Seu Carrinho</h2>
+        <span onclick="fecharCarrinho()" style="cursor:pointer">✖</span>
       </div>
-    </section>
+      <ul id="lista-carrinho"></ul>
+      <p><strong>Total:</strong> R$ <span id="total">0.00</span></p>
+      <button class="limpar-btn" onclick="limparCarrinho()">Limpar Carrinho</button>
+      <button class="finalizar-btn" onclick="finalizarCompra()">Finalizar Compra no WhatsApp</button>
+    </div>
+  </section>
 
-    <section class="sobre" id="sobre">
-      <h2 class="titulo-sobre">Sobre</h2>
-      <p class="texto-sobre">
+  <section class="section">
+    <h2>Ambientes que transformamos</h2>
+    <div class="grid">
+      <div class="card">Salas Comerciais</div>
+      <div class="card">Residências de Alto Padrão</div>
+      <div class="card">Áreas Gourmet e Externas</div>
+      <div class="card">Escadas, Hall e Corredores</div>
+      <div class="card">Paredes com Revestimento Nobre</div>
+      <div class="card">Ambientes de Luxo Personalizados</div>
+    </div>
+  </section>
 
-        Somos especializados em transformar espaços com <strong>pisos e pedras de alto padrão</strong>.
-        <br><br>
-        Com fabricação própria no Brasil, oferecemos revestimentos diferenciados, materiais exclusivos e acabamento
-        impecável para os clientes mais exigentes.
-        <br><br>
-        • Atendimento personalizado<br>
-        • Estilo e elegância em cada detalhe<br>
-        • Equipe experiente e comprometida<br>
+  <section class="sobre" id="sobre">
+    <h2 class="titulo-sobre">Sobre</h2>
+    <p class="texto-sobre">
+      Somos especializados em transformar espaços com <strong>pisos e pedras de alto padrão</strong>.<br><br>
+      Com fabricação própria no Brasil, oferecemos revestimentos diferenciados, materiais exclusivos e acabamento
+      impecável para os clientes mais exigentes.<br><br>
+      • Atendimento personalizado<br>
+      • Estilo e elegância em cada detalhe<br>
+      • Equipe experiente e comprometida<br>
+    </p>
+  </section>
 
-      </p>
-    </section>
+  <section class="section" id="obras">
+    <h2>Nossos projetos entregues</h2>
+    <div class="grid">
+      <img src="./img/FACHADAS.webp" style="width:100%; border-radius:10px;">
+      <img src="./img/D_NQ_NP_997989-MLB79257576999_092024-O.webp" style="width:100%; border-radius:10px;">
+      <img src="./img/83156c11-acf0-4c8f-b0c3-ff60558b26ee.png" style="width:100%; border-radius:10px;">
+    </div>
+  </section>
 
-    <section class="section" id="obras">
-      <h2>Nossos projetos entregues</h2>
-      <div class="grid">
-        <img src="./img/FACHADAS.webp" style="width:100%; border-radius:10px;">
-        <img src="./img/D_NQ_NP_997989-MLB79257576999_092024-O.webp" style="width:100%; border-radius:10px;">
-        <img src="./img/83156c11-acf0-4c8f-b0c3-ff60558b26ee.png" style="width:100%; border-radius:10px;">
-      </div>
-    </section>
+  <section class="contato" id="contato">
+    <h2 class="titulo-contato">Contato</h2>
+    <div class="faq">
+      <h3>Perguntas Frequentes</h3>
+      <p><strong>Vocês trabalham com áreas externas?</strong><br>
+        Sim! Nossas pedras são ideais para áreas gourmet, quintais e fachadas.</p>
+      <p><strong>Posso solicitar um projeto personalizado?</strong><br>
+        Claro! Trabalhamos com projetos sob medida para cada cliente.</p>
+      <p><strong>Atendem apenas o ABC?</strong><br>
+        Atendemos todo o estado de SP com foco na região metropolitana.</p>
+    </div>
+    <div class="formulario-contato">
+      <h3>Fale Conosco</h3>
+      <form>
+        <input type="text" placeholder="Seu nome" required>
+        <input type="email" placeholder="Seu e-mail" required>
+        <input type="text" placeholder="Assunto" required>
+        <textarea placeholder="Sua mensagem" required></textarea>
+        <button type="submit">ENVIAR</button>
+      </form>
+    </div>
+  </section>
 
-    <section class="contato" id="contato">
-      <h2 class="titulo-contato">Contato</h2>
+  <footer>
+    <p>&copy; 2025 Passos Revestimentos - Pisos e Pedras de Alto Padrão | Todos os direitos reservados</p>
+  </footer>
 
-      <div class="faq">
-        <h3>Perguntas Frequentes</h3>
-        <p><strong>Vocês trabalham com áreas externas?</strong><br>
-          Sim! Nossas pedras são ideais para áreas gourmet, quintais e fachadas.</p>
-
-        <p><strong>Posso solicitar um projeto personalizado?</strong><br>
-          Claro! Trabalhamos com projetos sob medida para cada cliente.</p>
-
-        <p><strong>Atendem apenas o ABC?</strong><br>
-          Atendemos todo o estado de SP com foco na região metropolitana.</p>
-      </div>
-
-      <div class="formulario-contato">
-        <h3>Fale Conosco</h3>
-        <form>
-          <input type="text" placeholder="Seu nome" required>
-          <input type="email" placeholder="Seu e-mail" required>
-          <input type="text" placeholder="Assunto" required>
-          <textarea placeholder="Sua mensagem" required></textarea>
-          <button type="submit">ENVIAR</button>
-        </form>
-      </div>
-    </section>
-
-    <footer>
-      <p>&copy; 2025 Passos Revestimentos - Pisos e Pedras de Alto Padrão | Todos os direitos reservados</p>
-    </footer>
-
-   <script>
-  const carrinho = [];
-  const listaCarrinho = document.getElementById("lista-carrinho");
-  const totalSpan = document.getElementById("total");
-  const quantidadeCarrinho = document.getElementById("quantidade-carrinho");
-  const carrinhoLateral = document.getElementById("carrinhoLateral");
-
-  function adicionarAoCarrinho(produto, preco) {
-    carrinho.push({ produto, preco });
-    atualizarCarrinho();
-  }
-
-  function atualizarCarrinho() {
-    listaCarrinho.innerHTML = "";
+  <script>
+    let carrinho = [];
     let total = 0;
 
-    carrinho.forEach(item => {
-      const li = document.createElement("li");
-      li.textContent = `${item.produto} - R$ ${item.preco.toFixed(2)}`;
-      listaCarrinho.appendChild(li);
-      total += item.preco;
-    });
-
-    totalSpan.textContent = total.toFixed(2);
-    quantidadeCarrinho.textContent = carrinho.length;
-  }
-
-  function abrirCarrinho() {
-    carrinhoLateral.classList.add("aberto");
-  }
-
-  function fecharCarrinho() {
-    carrinhoLateral.classList.remove("aberto");
-  }
-
-  function finalizarCompra() {
-    if (carrinho.length === 0) {
-      alert("Seu carrinho está vazio.");
-      return;
+    function removerDoCarrinho(index) {
+      if (index > -1) {
+        total -= carrinho[index].preco;
+        carrinho.splice(index, 1);
+        atualizarCarrinho();
+        atualizarContadorCarrinho();
+      }
     }
 
-    let mensagem = "Olá! Gostaria de finalizar meu pedido:\n\n";
-    carrinho.forEach(item => {
-      mensagem += `- ${item.produto}: R$ ${item.preco.toFixed(2)}\n`;
-    });
+    function atualizarContadorCarrinho() {
+      const contador = document.getElementById("contador-carrinho");
+      if (contador) contador.innerText = carrinho.length;
+    }
 
-    mensagem += `\nTotal: R$ ${totalSpan.textContent}`;
+    function adicionarAoCarrinho(nome, preco, imagem) {
+      carrinho.push({ nome, preco, imagem });
+      total += preco;
+      atualizarCarrinho();
+      abrirCarrinho();
+      atualizarContadorCarrinho();
+    }
 
-    const url = `https://wa.me/SEUNUMERO?text=${encodeURIComponent(mensagem)}`;
-    window.open(url, '_blank');
-  }
-</script>
-  </body>
+    function atualizarCarrinho() {
+      const listaCarrinho = document.getElementById("lista-carrinho");
+      const totalElemento = document.getElementById("total");
+      listaCarrinho.innerHTML = "";
+      let soma = 0;
 
-  </html>
+      carrinho.forEach((item, index) => {
+        const li = document.createElement("li");
+        li.innerHTML = `
+          <img src="${item.imagem}" alt="${item.nome}" style="width: 40px; height: auto; margin-right: 10px;">
+          ${item.nome} - R$ ${item.preco.toFixed(2)}
+          <button onclick="removerDoCarrinho(${index})" style="margin-left: 1px;">remover</button>
+        `;
+        listaCarrinho.appendChild(li);
+        soma += item.preco;
+      });
+
+      total = soma;
+      totalElemento.innerText = total.toFixed(2);
+      atualizarContadorCarrinho();
+    }
+
+    function abrirCarrinho() {
+      const carrinhoDiv = document.getElementById('carrinho-lateral');
+      if (carrinhoDiv) carrinhoDiv.classList.add('aberto');
+    }
+
+    function fecharCarrinho() {
+      const carrinhoDiv = document.getElementById('carrinho-lateral');
+      if (carrinhoDiv) carrinhoDiv.classList.remove('aberto');
+    }
+
+    function limparCarrinho() {
+      carrinho = [];
+      total = 0;
+      atualizarCarrinho();
+      atualizarContadorCarrinho();
+
+      const contador = document.getElementById("contador-carrinho");
+      if (contador) contador.innerText = '0';
+    }
+
+    function finalizarCompra() {
+      let mensagem = "Olá! Gostaria de finalizar minha compra com os seguintes itens:%0A";
+      carrinho.forEach(item => {
+        mensagem += `- ${item.nome} (R$ ${item.preco.toFixed(2)})%0A`;
+      });
+      mensagem += `%0ATotal: R$ ${total.toFixed(2)}`;
+      const telefone = "5562982000086"; // Ex: 5562999999999
+      const url = `https://wa.me/${telefone}?text=${mensagem}`;
+      window.open(url, "_blank");
+    }
+
+    // Para alternar o carrinho ao clicar no ícone fixo
+    function toggleCarrinho() {
+      const carrinhoDiv = document.getElementById('carrinho-lateral');
+      if (carrinhoDiv) carrinhoDiv.classList.toggle('aberto');
+    }
+  </script>
 </body>
-
 </html>
+   
