@@ -560,3 +560,8 @@ header, main, footer {
     gap: 15px;
   }
 }
+.cart-products {
+  max-height: 300px; /* Ajuste conforme o tamanho do seu layout */
+  overflow-y: auto;
+  padding-right: 10px; /* Espaço pro scroll não encostar nos produtos */
+}
